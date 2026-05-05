@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Política de Privacidade do App Pitanga Kids — GDPR, LGPD, proteção de dados e crianças.">
+<title>Política de Privacidade — Pitanga Kids</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --p:#E06030; --cream:#FBF7F0; --warm:#FFFDF8;
+  --bark:#2A1808; --bark2:#503020; --bark3:#806040;
+  --sage3:#E8F4EE; --sage:#90B8A0; --sage2:#C0D8C8;
+  --rose3:#FDF0F2; --rose:#D8909A; --rose2:#EEC0C8;
+  --lilac3:#F2EEFA; --lilac:#C0B0D0; --lilac2:#DDD8EE;
+  --r:16px;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--bark);line-height:1.7;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.15;}
+h1{font-size:clamp(1.9rem,5vw,3rem);font-weight:700;}
+h2{font-size:clamp(1.1rem,3vw,1.4rem);font-weight:600;color:var(--bark2);}
+h3{font-size:1rem;font-weight:700;color:var(--bark);}
+em{font-style:italic;color:var(--p);}
+a{color:var(--p);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(251,247,240,.97);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(42,24,8,.08);
+  height:58px;display:flex;align-items:center;padding:0 1.25rem;
+}
+.nav-inner{max-width:860px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--p);text-decoration:none;display:flex;align-items:center;gap:.4rem;}
+.nav-logo img{width:30px;height:30px;border-radius:8px;}
+.nav-back{font-size:.82rem;font-weight:600;color:var(--bark3);text-decoration:none;display:flex;align-items:center;gap:.3rem;padding:.4rem .85rem;border-radius:100px;border:1.5px solid rgba(42,24,8,.1);transition:all .2s;}
+.nav-back:hover{border-color:var(--p);color:var(--p);text-decoration:none;}
+
+/* HERO */
+.hero{
+  background:linear-gradient(160deg,var(--warm) 0%,var(--rose3) 100%);
+  padding:3.5rem 1.25rem 3rem;text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:white;border:1px solid var(--rose2);
+  padding:.32rem .9rem;border-radius:100px;
+  font-size:.72rem;font-weight:700;color:var(--bark2);
+  margin-bottom:1rem;font-family:'Nunito',sans-serif;
+}
+.hero h1{margin-bottom:.6rem;}
+.hero-meta{font-size:.82rem;color:var(--bark3);margin-top:.5rem;}
+
+/* TOC */
+.toc{
+  background:white;border-radius:var(--r);padding:1.5rem;
+  border:1px solid rgba(42,24,8,.07);margin:2rem 0;
+}
+.toc h3{margin-bottom:.75rem;font-size:.9rem;}
+.toc ol{padding-left:1.25rem;}
+.toc li{font-size:.85rem;color:var(--bark2);margin-bottom:.4rem;}
+.toc a{color:var(--p);font-weight:600;}
+
+/* CONTENT */
+.content{max-width:860px;margin:0 auto;padding:2.5rem 1.25rem 5rem;}
+.section{margin-bottom:1.5rem;scroll-margin-top:80px;}
+.section-card{
+  background:white;border-radius:var(--r);padding:1.75rem;
+  border:1px solid rgba(42,24,8,.07);
+  box-shadow:0 2px 12px rgba(42,24,8,.05);
+}
+.section-header{
+  display:flex;align-items:center;gap:.75rem;
+  margin-bottom:1.1rem;padding-bottom:.9rem;
+  border-bottom:1px solid rgba(42,24,8,.07);
+}
+.section-num{
+  width:32px;height:32px;background:var(--p);color:white;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;font-weight:800;flex-shrink:0;font-family:'Nunito',sans-serif;
+}
+.section-card p{font-size:.9rem;color:var(--bark2);line-height:1.78;margin-bottom:.75rem;}
+.section-card p:last-child{margin-bottom:0;}
+.section-card strong{color:var(--bark);font-weight:700;}
+ul.data-list{list-style:none;margin:.5rem 0 .75rem;}
+ul.data-list li{
+  font-size:.88rem;color:var(--bark2);
+  padding:.42rem 0;border-bottom:1px solid rgba(42,24,8,.05);
+  display:flex;align-items:flex-start;gap:.6rem;line-height:1.55;
+}
+ul.data-list li:last-child{border-bottom:none;}
+ul.data-list li::before{content:'🌿';font-size:.72rem;flex-shrink:0;margin-top:3px;}
+
+/* BADGES */
+.badge-row{display:flex;gap:.65rem;flex-wrap:wrap;margin:.75rem 0;}
+.badge{
+  padding:.35rem 1rem;border-radius:100px;
+  font-size:.78rem;font-weight:700;font-family:'Nunito',sans-serif;
+}
+.badge-eu{background:var(--lilac3);color:#6050a0;border:1px solid var(--lilac2);}
+.badge-br{background:var(--sage3);color:#3a7060;border:1px solid var(--sage2);}
+.badge-child{background:var(--rose3);color:#a04060;border:1px solid var(--rose2);}
+
+/* HIGHLIGHT BOX */
+.highlight{
+  background:linear-gradient(135deg,rgba(224,96,48,.06),rgba(224,96,48,.02));
+  border:1.5px solid rgba(224,96,48,.2);
+  border-radius:var(--r);padding:1.25rem 1.4rem;margin:.75rem 0;
+}
+.highlight p{font-size:.88rem;color:var(--bark2);margin:0;line-height:1.7;}
+.highlight strong{color:var(--p);}
+
+/* IMPORTANT */
+.important{
+  background:var(--rose3);border:1.5px solid var(--rose2);
+  border-radius:var(--r);padding:1.1rem 1.4rem;margin:.75rem 0;
+  display:flex;gap:.75rem;align-items:flex-start;
+}
+.important-icon{font-size:1.2rem;flex-shrink:0;}
+.important p{font-size:.87rem;color:var(--bark2);margin:0;line-height:1.65;}
+
+/* CONTACT BOX */
+.contact-box{
+  background:var(--p);border-radius:var(--r);
+  padding:2.25rem;text-align:center;margin-top:2rem;
+}
+.contact-box h2{color:white;margin-bottom:.5rem;font-size:1.4rem;}
+.contact-box p{color:rgba(255,255,255,.85);font-size:.9rem;margin-bottom:.75rem;}
+.contact-box a{
+  display:inline-block;color:white;font-weight:800;font-size:.95rem;
+  background:rgba(255,255,255,.18);padding:.6rem 1.4rem;
+  border-radius:100px;border:1.5px solid rgba(255,255,255,.3);
+  transition:all .2s;
+}
+.contact-box a:hover{background:rgba(255,255,255,.28);text-decoration:none;}
+
+/* FOOTER */
+footer{
+  background:var(--bark);padding:2.5rem 1.25rem;text-align:center;
+}
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;
+  color:white;display:inline-flex;align-items:center;gap:.4rem;margin-bottom:.6rem;
+}
+.footer-logo img{width:30px;height:30px;border-radius:8px;}
+footer p{font-size:.78rem;color:rgba(255,255,255,.35);margin-top:.4rem;}
+footer a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.78rem;}
+footer a:hover{color:white;}
+.footer-links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:.75rem;}
+
+@media(min-width:640px){
+  .hero{padding:4.5rem 2rem 3.5rem;}
+  .content{padding:3rem 2rem 5rem;}
+  nav{padding:0 2rem;}
+  footer{padding:2.5rem 2rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="data:image/jpeg;base64,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" alt="logo">
+      Pitanga Kids
+    </a>
+    <a href="../index.html" class="nav-back">← Voltar ao site</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">🔒 Política de Privacidade</div>
+  <h1>Sua privacidade é <em>sagrada</em> para nós</h1>
+  <p style="color:var(--bark3);font-size:.92rem;max-width:520px;margin:.75rem auto 0;line-height:1.7;">
+    Esta política explica de forma clara e transparente como o App Pitanga Kids coleta, usa e protege os seus dados — em conformidade com GDPR e LGPD.
+  </p>
+  <p class="hero-meta">
+    Pitanga Kids Studio · pitangakids.com<br>
+    <strong>Última atualização: 1 de Janeiro de 2026</strong>
+  </p>
+</div>
+
+<div class="content">
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 Índice</h3>
+    <ol>
+      <li><a href="#introducao">Introdução e responsável pelo tratamento</a></li>
+      <li><a href="#dados">Dados coletados</a></li>
+      <li><a href="#uso">Como usamos os dados</a></li>
+      <li><a href="#compartilhamento">Compartilhamento de dados</a></li>
+      <li><a href="#retencao">Retenção e segurança</a></li>
+      <li><a href="#criancas">Proteção de crianças (COPPA/GDPR)</a></li>
+      <li><a href="#direitos">Seus direitos</a></li>
+      <li><a href="#cookies">Cookies e tecnologias similares</a></li>
+      <li><a href="#alteracoes">Alterações nesta política</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. INTRODUÇÃO -->
+  <div class="section" id="introducao">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2>Introdução e responsável pelo tratamento</h2>
+      </div>
+      <p>A <strong>Pitanga Kids</strong> valoriza e respeita profundamente a privacidade de todos os seus usuários, especialmente das crianças. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações ao utilizar:</p>
+      <ul class="data-list">
+        <li>O <strong>App Pitanga Kids</strong> (disponível no Google Play e App Store)</li>
+        <li>A <strong>Coleção Tulipa</strong> (livros infantis)</li>
+        <li>O site <strong>pitangakids.com</strong></li>
+      </ul>
+      <p>Ao utilizar nossos serviços, você concorda com as práticas descritas neste documento. Se não concordar, por favor não utilize nossos serviços.</p>
+      <div class="highlight">
+        <p><strong>Responsável pelo tratamento de dados:</strong><br>
+        Pitanga Kids · pitangakids.com<br>
+        Email: <a href="mailto:pitangakids.app@outlook.com">pitangakids.app@outlook.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. DADOS -->
+  <div class="section" id="dados">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2>Dados que coletamos</h2>
+      </div>
+      <p>Coletamos apenas as informações <strong>estritamente necessárias</strong> para fornecer nossos serviços:</p>
+      
+      <h3 style="margin:.9rem 0 .5rem;">Dados de conta</h3>
+      <ul class="data-list">
+        <li>Nome e endereço de e-mail para criação e gestão de conta</li>
+        <li>Senha (armazenada de forma criptografada — nunca em texto simples)</li>
+        <li>País de residência (para conformidade com leis locais)</li>
+      </ul>
+
+      <h3 style="margin:.9rem 0 .5rem;">Dados de pagamento</h3>
+      <ul class="data-list">
+        <li>Informações de pagamento processadas com segurança por provedores certificados (Google Pay, Stripe)</li>
+        <li><strong>Nunca armazenamos dados de cartão de crédito diretamente</strong></li>
+        <li>Histórico de assinatura e faturas</li>
+      </ul>
+
+      <h3 style="margin:.9rem 0 .5rem;">Dados de uso do aplicativo</h3>
+      <ul class="data-list">
+        <li>Atividades geradas e baixadas (para melhorar as recomendações da IA)</li>
+        <li>Preferências de metodologia pedagógica</li>
+        <li>Frequência de uso e funcionalidades utilizadas</li>
+        <li>Dados técnicos do dispositivo (modelo, sistema operacional, versão do app)</li>
+      </ul>
+
+      <h3 style="margin:.9rem 0 .5rem;">Dados voluntários</h3>
+      <ul class="data-list">
+        <li>E-mail fornecido voluntariamente para newsletter ou recursos gratuitos</li>
+        <li>Depoimentos ou histórias partilhadas na comunidade Pitanguinhas</li>
+      </ul>
+
+      <div class="important">
+        <div class="important-icon">🚫</div>
+        <p><strong>O que NÃO coletamos:</strong> dados de localização GPS, microfone, câmera, contatos ou qualquer dado sensível não listado acima.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. USO -->
+  <div class="section" id="uso">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2>Como usamos os dados</h2>
+      </div>
+      <p>Utilizamos os seus dados para as seguintes finalidades, sempre com base legal adequada:</p>
+      <ul class="data-list">
+        <li><strong>Execução do contrato:</strong> fornecer, operar e manter o App e os serviços contratados</li>
+        <li><strong>Personalização:</strong> gerar atividades pedagógicas personalizadas com IA com base nas suas preferências</li>
+        <li><strong>Comunicação:</strong> enviar comunicações relevantes sobre novidades, atualizações e dicas pedagógicas (somente com o seu consentimento)</li>
+        <li><strong>Pagamentos:</strong> processar assinaturas, cobranças e emitir faturas</li>
+        <li><strong>Suporte:</strong> responder às suas dúvidas e solicitações</li>
+        <li><strong>Melhoria dos serviços:</strong> analisar dados de uso agregados e anónimos para melhorar a experiência</li>
+        <li><strong>Conformidade legal:</strong> cumprir obrigações legais aplicáveis</li>
+      </ul>
+      <div class="highlight">
+        <p><strong>Nunca vendemos, alugamos ou comercializamos os seus dados pessoais com terceiros.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. COMPARTILHAMENTO -->
+  <div class="section" id="compartilhamento">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2>Compartilhamento de dados</h2>
+      </div>
+      <p>Os seus dados podem ser partilhados <strong>apenas</strong> nos seguintes casos:</p>
+      <ul class="data-list">
+        <li><strong>Prestadores de serviços:</strong> empresas que nos auxiliam a operar a plataforma (hospedagem, processamento de pagamentos, envio de e-mails) — sob contratos de confidencialidade e apenas com acesso aos dados necessários para a sua função</li>
+        <li><strong>Inteligência artificial:</strong> os dados de preferências são enviados para a API de IA para geração de atividades personalizadas — nunca incluem dados pessoais identificáveis das crianças</li>
+        <li><strong>Obrigação legal:</strong> quando exigido por lei, ordem judicial ou autoridade competente</li>
+        <li><strong>Proteção de direitos:</strong> para proteger direitos, propriedade ou segurança da Pitanga Kids e dos nossos utilizadores</li>
+      </ul>
+      <div class="important">
+        <div class="important-icon">⚠️</div>
+        <p>Não partilhamos dados com anunciantes, redes de publicidade ou corretores de dados em nenhuma circunstância.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. RETENÇÃO E SEGURANÇA -->
+  <div class="section" id="retencao">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2>Retenção e segurança dos dados</h2>
+      </div>
+      <h3 style="margin-bottom:.5rem;">Retenção</h3>
+      <ul class="data-list">
+        <li>Dados de conta: mantidos enquanto a conta estiver ativa + 30 dias após o cancelamento</li>
+        <li>Dados de pagamento: mantidos pelo período exigido por lei fiscal (geralmente 7 anos)</li>
+        <li>Dados de uso: mantidos por 12 meses em forma identificável; após isso, anonimizados</li>
+        <li>Após solicitação de exclusão: eliminados em até 30 dias úteis</li>
+      </ul>
+      <h3 style="margin:.9rem 0 .5rem;">Segurança</h3>
+      <ul class="data-list">
+        <li>Encriptação SSL/TLS em todas as comunicações</li>
+        <li>Senhas armazenadas com hash bcrypt (nunca em texto simples)</li>
+        <li>Acesso restrito aos dados — apenas colaboradores autorizados</li>
+        <li>Backups regulares com encriptação</li>
+        <li>Monitorização de segurança contínua</li>
+      </ul>
+      <p>Em caso de violação de dados que afete os seus direitos, notificaremos os utilizadores afetados e as autoridades competentes dentro do prazo legal (72 horas para GDPR).</p>
+    </div>
+  </div>
+
+  <!-- 6. CRIANÇAS -->
+  <div class="section" id="criancas">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2>Proteção especial de crianças</h2>
+      </div>
+      <div class="badge-row">
+        <span class="badge badge-child">👶 COPPA — EUA</span>
+        <span class="badge badge-eu">🇪🇺 GDPR — Europa</span>
+        <span class="badge badge-br">🇧🇷 LGPD — Brasil</span>
+      </div>
+      <p>A proteção das crianças é a nossa <strong>prioridade máxima</strong>. O App Pitanga Kids é uma ferramenta operada exclusivamente por pais, responsáveis e educadores adultos.</p>
+      <ul class="data-list">
+        <li><strong>Não coletamos dados pessoais de crianças diretamente</strong> — o cadastro e todas as interações são realizados pelo adulto responsável</li>
+        <li>Não solicitamos informações de menores de 13 anos (ou a idade mínima aplicável no país) sem consentimento parental explícito e verificável</li>
+        <li>As atividades geradas pelo app não requerem que a criança insira qualquer dado pessoal</li>
+        <li>Não exibimos publicidade direcionada a crianças</li>
+        <li>Não partilhamos dados relacionados com crianças com terceiros para fins comerciais</li>
+        <li>Se tomarmos conhecimento de que coletamos inadvertidamente dados de uma criança sem consentimento parental, eliminaremos esses dados imediatamente</li>
+      </ul>
+      <div class="highlight">
+        <p>Se é pai/mãe e acredita que o seu filho forneceu dados pessoais ao nosso serviço sem o seu consentimento, contacte-nos imediatamente em <a href="mailto:pitangakids.app@outlook.com">pitangakids.app@outlook.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. DIREITOS -->
+  <div class="section" id="direitos">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2>Os seus direitos</h2>
+      </div>
+      <p>Nos termos do GDPR (Europa) e LGPD (Brasil), tem os seguintes direitos:</p>
+      <ul class="data-list">
+        <li><strong>Acesso:</strong> solicitar uma cópia dos dados pessoais que temos sobre si</li>
+        <li><strong>Retificação:</strong> corrigir dados incorretos ou incompletos</li>
+        <li><strong>Eliminação:</strong> solicitar a eliminação dos seus dados (direito ao esquecimento) — respondemos em até 30 dias úteis</li>
+        <li><strong>Portabilidade:</strong> receber os seus dados num formato estruturado e legível por máquina</li>
+        <li><strong>Oposição:</strong> opor-se ao tratamento em determinadas circunstâncias</li>
+        <li><strong>Retirada do consentimento:</strong> retirar o consentimento para comunicações de marketing a qualquer momento</li>
+        <li><strong>Limitação:</strong> solicitar a limitação do tratamento dos seus dados em determinadas situações</li>
+        <li><strong>Reclamação:</strong> apresentar reclamação à autoridade de proteção de dados competente (ex: CNPD em Portugal, CNIL em França, ANPD no Brasil)</li>
+      </ul>
+      <p>Para exercer qualquer destes direitos, contacte-nos em: <a href="mailto:pitangakids.app@outlook.com"><strong>pitangakids.app@outlook.com</strong></a></p>
+      <p>Respondemos a todos os pedidos no prazo máximo de <strong>30 dias úteis</strong>.</p>
+    </div>
+  </div>
+
+  <!-- 8. COOKIES -->
+  <div class="section" id="cookies">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2>Cookies e tecnologias similares</h2>
+      </div>
+      <p>Utilizamos cookies e tecnologias similares para:</p>
+      <ul class="data-list">
+        <li><strong>Cookies essenciais:</strong> necessários para o funcionamento do site (sessão de login, preferências de idioma)</li>
+        <li><strong>Cookies analíticos:</strong> para compreender como os utilizadores interagem com o site — dados agregados e anónimos</li>
+        <li><strong>Cookies de preferências:</strong> para lembrar as suas configurações e preferências</li>
+      </ul>
+      <p>Pode configurar o seu browser para recusar cookies. Note que isso pode afetar algumas funcionalidades do site. O App em si não utiliza cookies — apenas identificadores de sessão seguros.</p>
+    </div>
+  </div>
+
+  <!-- 9. ALTERAÇÕES -->
+  <div class="section" id="alteracoes">
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-num">9</div>
+        <h2>Alterações a esta política</h2>
+      </div>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças nos nossos serviços ou na legislação aplicável.</p>
+      <ul class="data-list">
+        <li>A data da última atualização estará sempre indicada no topo deste documento</li>
+        <li>Para alterações significativas, notificaremos por e-mail e/ou por aviso em destaque no app e no site</li>
+        <li>O uso continuado dos serviços após a notificação constitui aceitação das alterações</li>
+      </ul>
+      <p><strong>Versão atual:</strong> 1.0 — 1 de Janeiro de 2026</p>
+    </div>
+  </div>
+
+  <!-- 10. CONTATO -->
+  <div class="section" id="contato">
+    <div class="contact-box">
+      <h2>Dúvidas? Fale connosco 💛</h2>
+      <p>Respondemos a todas as questões sobre privacidade com carinho e no menor tempo possível — máximo 30 dias úteis.</p>
+      <a href="mailto:pitangakids.app@outlook.com">pitangakids.app@outlook.com</a>
+      <p style="margin-top:1rem;font-size:.78rem;color:rgba(255,255,255,.6);">Pitanga Kids · pitangakids.com</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <img src="data:image/jpeg;base64,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" alt="logo">
+    Pitanga Kids
+  </div>
+  <p>© 2026 Pitanga Kids · pitangakids.com · Todos os direitos reservados</p>
+  <div class="footer-links">
+    <a href="../index.html">← Voltar ao site</a>
+    <a href="mailto:pitangakids.app@outlook.com">pitangakids.app@outlook.com</a>
+    <a href="https://instagram.com/pitangakids.app" target="_blank">@pitangakids.app</a>
+  </div>
+</footer>
+
+</body>
+</html>
